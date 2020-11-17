@@ -27,8 +27,8 @@ describe('TaskServer', () => {
       ],
     }).compile();
 
-    tasksService = await module.get<TasksService>(TasksService);
-    taskRepository = await module.get<TaskRepository>(TaskRepository);
+    tasksService = module.get<TasksService>(TasksService);
+    taskRepository = module.get<TaskRepository>(TaskRepository);
   });
 
   describe('getTasks', () => {
